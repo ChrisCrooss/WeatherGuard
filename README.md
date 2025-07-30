@@ -1,13 +1,13 @@
 # 🌦️ WeatherGuard
-WeatherGuard is a multilingual, weather-aware safety companion designed for outdoor workers. By combining real-time weather data, job-specific health risk analysis, and AI-generated safety advice, WeatherGuard aims to reduce weather-related risks and promote informed decision-making in the field.
+WeatherGuard is a multilingual, weather-aware safety companion designed for outdoor workers. By combining real-time weather data, job-specific health risk analysis, and AI-generated safety advices, WeatherGuard aims to reduce weather-related risks and foster informed decision-making in the field.
 # Problem Statement
-Outdoor workers face unpredictable and often dangerous weather conditions. Whether it's extreme heat, cold, wind, or rain, these environments pose serious health risks—particularly for workers in construction, agriculture, delivery, and gardening. Many lack access to real-time, localized guidance tailored to their job and climate.
+Outdoor workers face unknowed and often dangerous weather conditions. Whether it's extreme heat, cold, wind, or rain, these environments pose serious health risks—particularly for workers in construction, agriculture, delivery, and gardening. Many lack access to real-time, localized guidance tailored to their job and climate. Also the unaware of what they should do in each weather.
 # Our Solution
 WeatherGuard combines:
 
 Real-time weather data (via OpenWeatherMap)
 
-AI-driven safety advice (via OpenAI GPT-4o)
+In process AI-driven safety advice (via OpenAI GPT-4o)
 
 Job-specific risk assessments and safety checklists
 
@@ -15,14 +15,14 @@ Multilingual UI support (English, Español, Français, Deutsch)
 
 Interactive location mapping (via Folium)
 
-This tool empowers outdoor workers with personalized, actionable health and safety information based on their current location and job type.
+This tool will hellp outdoor workers with personalized and safety information based on their current location and job type. Algo giving precise information totally free.
 
 # Features
-Enter your city and country code (e.g., Quito,EC)
+Searcher by city (e.g., Quito,EC or Paris,FR)
 
-Select your job type: Construction, Farming, Gardening, Delivery, Other
+Job type selector: Construction, Farming, Gardening, Delivery, Other
 
-Get localized weather data: temperature, humidity, wind speed, conditions
+Get precise weather data: temperature, humidity, wind speed, conditions of the location previous searched
 
 Receive health risk level classification: Low, Moderate, High, Extreme
 
@@ -57,72 +57,33 @@ openai
 
 requests
 
-# Clone the repository
-git clone https://github.com/your-username/weatherguard.git
-cd weatherguard
-
-# Create a virtual environment (optional but recommended)
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
 # Install dependencies
 pip install -r requirements.txt
 
 streamlit run app.py
 Replace app.py with your script filename if different.
 
+Also you can use run.bat after install requeriments.txt to run the app.
+
 # API Keys
-To run WeatherGuard, you’ll need:
 
-OpenWeatherMap API key → Get one here
+OpenWeatherMap API key
 
-OpenAI API key → Get one here
+OpenAI API key
 
-Set them directly in the script or use environment variables for security:
-
-bash
-Copiar
-Editar
-export OPENAI_API_KEY='your-openai-key'
-export WEATHER_API_KEY='your-openweather-key'
-Or replace them in the code:
-
-python
-Copiar
-Editar
-openai.api_key = "sk-..."
-api_key = "66ea..."
-# Project Structure
-bash
-Copiar
-Editar
-weatherguard/
-│
-├── app.py                  # Main Streamlit application
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+Set them directly in the script
 # Intended Impact
-WeatherGuard empowers outdoor workers to stay safe, proactive, and informed. By combining modern AI with real-time weather insights, it:
+WeatherGuard foster outdoor workers to stay safe, proactive, and informed. By combining modern AI with real-time weather insights, it:
 
-Reduces accidents and illnesses
+Reduces accidents and illnesses by safety advices and precise information
 
-Encourages preventative safety habits
+Global information by the multilingual support
 
-Promotes language inclusivity in safety tech
-
-Makes occupational health guidance accessible and interactive
+Makes personalized health guidance accessible and interactive with a checklist
 
 # License
 This project is licensed under the MIT License. See LICENSE for details.
 
-# Acknowledgments
-OpenWeatherMap for weather data
-
-OpenAI for the GPT-4o language model
-
-Streamlit for rapid UI development
-
-Folium for mapping
-
 # 🌐 Live Demo (Optional)
+Tested in Google Chrome 
 https://weatherguard.streamlit.app/
