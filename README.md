@@ -41,7 +41,7 @@ Español (Spanish)
 
 Français (French)
 
-Deutsch (German)
+Deutsch (Germany)
 
 # Installation & Setup
 Requirements
