@@ -3,6 +3,7 @@ import requests
 import folium
 from streamlit_folium import st_folium
 import openai
+import os
 
 st.set_page_config(page_title="WeatherGuard", layout="centered")
 
@@ -91,7 +92,7 @@ job_type = st.selectbox(t_input["Job Type"], t_input["Job Types"], key="job_type
 
 # OpenWeatherMap API
 if location:
-    api_key = "66ea62058eaf1a752a7e2042ab1b61e7"
+    API_KEY = os.getenv("OPENWEATHER_API_KEY")
     url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
     response = requests.get(url)
 
