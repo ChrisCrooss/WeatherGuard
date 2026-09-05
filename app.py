@@ -93,7 +93,7 @@ job_type = st.selectbox(t_input["Job Type"], t_input["Job Types"], key="job_type
 # OpenWeatherMap API
 if location:
     API_KEY = st.secrets["OPENWEATHER_API_KEY"]
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={API_KEY}&units=metric"
     response = requests.get(url)
 
     if response.status_code == 200:
