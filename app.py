@@ -416,16 +416,21 @@ if location:
                 st.write(response.choices[0].message.content)
             except Exception as e:
                 st.error(f"OpenAI API error: {e}")
-    else:
-    st.error("Unable to retrieve weather data.")
-    st.write(f"OpenWeatherMap status code: {response.status_code}")
-    st.stop()
+     else:
+        st.error("Unable to retrieve weather data.")
+        st.write(f"OpenWeatherMap status code: {response.status_code}")
+        st.stop()
 
     # Severe weather alert
     if temp >= 35 or "storm" in weather_desc.lower():
-        st.warning("⚠️ " + t.get("Severe Weather", "Severe weather alert! Take extra precautions."))
+        st.warning("⚠️ " + t.get(
+            "Severe Weather",
+            "Severe weather alert! Take extra precautions."
+        ))
 
     # Feedback
-    feedback = st.text_area("Feedback / Sugerencias / Rückmeldung / Retour d'information")
+    feedback = st.text_area(
+        "Feedback / Sugerencias / Rückmeldung / Retour d'information"
+    )
     if feedback:
         st.success("Thank you for your feedback!")
