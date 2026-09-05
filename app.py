@@ -421,6 +421,11 @@ if location:
         st.write(f"OpenWeatherMap status code: {response.status_code}")
         st.stop()
 
+    else:
+        st.error("Unable to retrieve weather data.")
+        st.write(f"OpenWeatherMap status code: {response.status_code}")
+        st.stop()
+
     # Severe weather alert
     if temp >= 35 or "storm" in weather_desc.lower():
         st.warning("⚠️ " + t.get(
